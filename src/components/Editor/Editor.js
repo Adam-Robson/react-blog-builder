@@ -1,7 +1,7 @@
 import './Editor.css';
 import '../Home/Home';
 
-export default function Editor({ title, setTitle }) {
+export default function Editor({ title, setTitle, subtitle, setSubtitle }) {
   return (
     <div className="editor">
       <div className="form-control">
@@ -9,7 +9,7 @@ export default function Editor({ title, setTitle }) {
         <label htmlFor="title">Title</label>
       </div>
       <div className="form-control">
-        <input type="text" />
+        <input type="text" value={subtitle} onChange={ (e) => { setSubtitle(e.target.value); } } />
         <label>Subtitle</label>
       </div>
       <div className="form-control">
