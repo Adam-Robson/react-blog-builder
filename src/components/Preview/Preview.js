@@ -1,11 +1,11 @@
 import './Preview.css';
 import '../Home/Home';
 
-export default function Preview({ title, subtitle }) {
+export default function Preview({ title, subtitle, font }) {
   /* <div className="preview" style="text-align: center;"></div> */
 
   return (
-    <div>
+    <div className={`preview ${font}`}>
       <h1>{ title }</h1>
       <h3>{ subtitle }</h3>
       <p>This is some blog text. </p>
