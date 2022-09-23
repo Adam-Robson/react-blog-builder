@@ -1,7 +1,7 @@
 import './Editor.css';
 import '../Home/Home';
 
-export default function Editor({ title, setTitle, subtitle, setSubtitle, font, setFont }) {
+export default function Editor({ title, setTitle, subtitle, setSubtitle, font, setFont, align, setAlign }) {
   return (
     <div className="editor">
       <div className="form-control">
@@ -27,7 +27,7 @@ export default function Editor({ title, setTitle, subtitle, setSubtitle, font, s
       </div>
       <div className="form-control">
         <label>Alignment</label>
-        <div className="radio-group">
+        <div className="radio-group" value={ align } onChange={ (e) => { setAlign(e.target.value); } }>
           <label>
             <input name="align" type="radio" value="left" />
             <i className="ri-align-left"></i>
