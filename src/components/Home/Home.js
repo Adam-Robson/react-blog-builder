@@ -10,10 +10,11 @@ export default function Home() {
   const [subtitle, setSubtitle] = useState('');
   const [font, setFont] = useState('');
   const [align, setAlign] = useState('');
+  const [textarea, setTextarea] = useState('');
   return (
     <main>
-      <Preview title={ title } subtitle={ subtitle } font={ font } align={ align } />
-      <Editor title={ title } setTitle={ setTitle } subtitle={ subtitle } setSubtitle={ setSubtitle } font={ font } setFont={ setFont } align={ align } setAlign={ setAlign } />
+      <Preview title={ title } subtitle={ subtitle } font={ font } align={ align } textarea={ textarea } />
+      <Editor title={ title } setTitle={ setTitle } subtitle={ subtitle } setSubtitle={ setSubtitle } font={ font } setFont={ setFont } align={ align } setAlign={ setAlign } textarea={ textarea } setTextarea={ setTextarea } />
     </main>
   );
 }

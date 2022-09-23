@@ -1,7 +1,7 @@
 import './Editor.css';
 import '../Home/Home';
 
-export default function Editor({ title, setTitle, subtitle, setSubtitle, font, setFont, align, setAlign }) {
+export default function Editor({ title, setTitle, subtitle, setSubtitle, font, setFont, align, setAlign, textarea, setTextarea }) {
   return (
     <div className="editor">
       <div className="form-control">
@@ -43,7 +43,7 @@ export default function Editor({ title, setTitle, subtitle, setSubtitle, font, s
         </div>
       </div>
       <div className="form-control">
-        <textarea style={{ height: '250px' }} />
+        <textarea value={ textarea } onChange={ (e) => { setTextarea(e.target.value); } } style={{ height: '250px' }} />
         <label>Text</label>
       </div>
     </div>
