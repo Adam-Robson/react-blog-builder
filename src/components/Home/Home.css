@@ -4,4 +4,10 @@ main {
   grid-template-areas: 'preview editor';
   grid-gap: 20px;
   height: calc(100vh - 80px);
+  background-color:rgb(159, 179, 184);
+  color: rgb(58, 97, 97);
+  padding: 25px;
+  font-size: large;
+
+
 }

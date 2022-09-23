@@ -6,11 +6,11 @@ export default function Editor({ title, setTitle, subtitle, setSubtitle, font, s
     <div className="editor">
       <div className="form-control">
         <input name="title" type="text" value={ title } onChange={ (e) => { setTitle(e.target.value); } } />
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title" className="caption">Title</label>
       </div>
       <div className="form-control">
         <input type="text" value={subtitle} onChange={ (e) => { setSubtitle(e.target.value); } } />
-        <label>Subtitle</label>
+        <label className="caption">Subtitle</label>
       </div>
       <div className="form-control">
         <select value={ font } onChange={ (e) => { setFont(e.target.value); } }>
@@ -23,10 +23,10 @@ export default function Editor({ title, setTitle, subtitle, setSubtitle, font, s
           <option value="roboto-mono">Roboto Mono</option>
           <option value="titillium">Titillium</option>
         </select>
-        <label>Font</label>
+        <label className="caption">Font</label>
       </div>
       <div className="form-control">
-        <label>Alignment</label>
+        <label className="caption">Alignment</label>
         <div className="radio-group" value={ align } onChange={ (e) => { setAlign(e.target.value); } }>
           <label>
             <input name="align" type="radio" value="left" />
@@ -44,7 +44,7 @@ export default function Editor({ title, setTitle, subtitle, setSubtitle, font, s
       </div>
       <div className="form-control">
         <textarea value={ textarea } onChange={ (e) => { setTextarea(e.target.value); } } style={{ height: '250px' }} />
-        <label>Text</label>
+        <label className="caption">Text</label>
       </div>
     </div>
   );

@@ -1,11 +1,14 @@
 footer {
-  color: var(--color3);
+  color: cornsilk;
   height: 40px;
-  background-color: var(--color2);
+  background-color: rgb(141, 156, 159);
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: fixed;
   width: 100%;
   bottom: 0;
+  font-size:large;
+  padding-right: 60px;
+  text-align: center;
 }
