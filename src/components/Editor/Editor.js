@@ -1,20 +1,19 @@
-import React from 'react';
-
 import './Editor.css';
+import '../Home/Home';
 
-export default function Editor() {
+export default function Editor({ title, setTitle, subtitle, setSubtitle, font, setFont, align, setAlign, textarea, setTextarea }) {
   return (
     <div className="editor">
       <div className="form-control">
-        <input name="title" type="text" />
-        <label htmlFor="title">Title</label>
+        <input name="title" type="text" value={ title } onChange={ (e) => { setTitle(e.target.value); } } />
+        <label htmlFor="title" className="caption">Title</label>
       </div>
       <div className="form-control">
-        <input type="text" />
-        <label>Subtitle</label>
+        <input type="text" value={subtitle} onChange={ (e) => { setSubtitle(e.target.value); } } />
+        <label className="caption">Subtitle</label>
       </div>
       <div className="form-control">
-        <select>
+        <select value={ font } onChange={ (e) => { setFont(e.target.value); } }>
           <option value="architect">{"Architect's Daughter"}</option>
           <option value="comforter">Comforter</option>
           <option value="fredoka">Fredoka</option>
@@ -24,11 +23,11 @@ export default function Editor() {
           <option value="roboto-mono">Roboto Mono</option>
           <option value="titillium">Titillium</option>
         </select>
-        <label>Font</label>
+        <label className="caption">Font</label>
       </div>
       <div className="form-control">
-        <label>Alignment</label>
-        <div className="radio-group">
+        <label className="caption">Alignment</label>
+        <div className="radio-group" value={ align } onChange={ (e) => { setAlign(e.target.value); } }>
           <label>
             <input name="align" type="radio" value="left" />
             <i className="ri-align-left"></i>
@@ -44,8 +43,8 @@ export default function Editor() {
         </div>
       </div>
       <div className="form-control">
-        <textarea style={{ height: '250px' }} />
-        <label>Text</label>
+        <textarea value={ textarea } onChange={ (e) => { setTextarea(e.target.value); } } style={{ height: '250px' }} />
+        <label className="caption">Text</label>
       </div>
     </div>
   );

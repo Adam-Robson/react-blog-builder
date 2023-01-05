@@ -1,18 +1,15 @@
-import React from 'react';
-
 import './Preview.css';
+import '../Home/Home';
 
-export default function Preview() {
-  // implement a Preview screen here
-  //  Note - the HTML should have the following structure
-  //  the main div should have a class of preview and the font-name prop
-  //  and should have style interpolated using the alignment prop
+export default function Preview({ title, subtitle, font, align, textarea }) {
+  /* <div className="preview" style="text-align: center;"></div> */
 
-  // <div class="preview indie-flower" style="text-align: center;">
-  //   <h1> Blog Title</h1>
-  //   <h3> Blog Subtitle</h3>
-  //   <p>This is some blog text. </p>
-  // </div>
+  return (
+    <div className={ `preview ${font}` } style={{ textAlign: `${align}` }}>
+      <h1>{ title }</h1>
+      <h3>{ subtitle }</h3>
+      <p>{ textarea }</p>
 
-  return <></>;
+    </div>
+  );
 }
